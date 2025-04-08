@@ -85,9 +85,9 @@ main:has(.back-link) {
   pointer-events: none;
 }
 
-.loader,
-.loader:before,
-.loader:after {
+.open,
+.open:before,
+.open:after {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
@@ -95,7 +95,7 @@ main:has(.back-link) {
   animation: bblFadInOut 1.8s infinite ease-in-out;
 }
 
-.loader {
+.open {
   color: #808080;
 
   font-size: 7px;
@@ -110,14 +110,14 @@ main:has(.back-link) {
   transform: translate(-50%, -50%);
 }
 
-.loader:before,
-.loader:after {
+.open:before,
+.open:after {
   content: '';
   position: absolute;
   top: 0;
 }
 
-.loader:before {
+.open:before {
   left: -3.5em;
   animation-delay: -0.32s;
 }

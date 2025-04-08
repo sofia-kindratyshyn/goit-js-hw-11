@@ -45,10 +45,10 @@ export function clearGallery() {
 
 export function showLoader() {
   const loader = document.querySelector('span');
-  loader.classList.add('loader');
+  loader.classList.add('open');
 }
 
 export function hideLoader() {
   const loader = document.querySelector('span');
-  loader.classList.remove('loader');
+  loader.classList.remove('open');
 }
