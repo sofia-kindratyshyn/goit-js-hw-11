@@ -44,12 +44,11 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  document
-    .querySelector('.gallery')
-    .insertAdjacentHTML('beforebegin', '<div class="loader"></div>');
+  const loader = document.querySelector('span');
+  loader.classList.add('loader');
 }
 
 export function hideLoader() {
-  const loader = document.querySelector('.loader');
+  const loader = document.querySelector('span');
   loader.classList.remove('loader');
 }
