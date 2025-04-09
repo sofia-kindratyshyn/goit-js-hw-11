@@ -44,11 +44,15 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  const loader = document.querySelector('span');
-  loader.classList.add('open');
+  const loader = document.querySelector('.loader');
+  if (loader) {
+    loader.classList.add('open');
+  }
 }
 
 export function hideLoader() {
-  const loader = document.querySelector('span');
-  loader.classList.remove('open');
+  const loader = document.querySelector('.loader');
+  if (loader) {
+    loader.classList.remove('open');
+  }
 }
