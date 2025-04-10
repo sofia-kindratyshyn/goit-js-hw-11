@@ -1,5 +1,7 @@
 import getImagesByQuery from './js/pixabay-api';
 import { clearGallery, hideLoader, showLoader } from './js/render-functions';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('form');
 
@@ -20,7 +22,12 @@ async function onHandleSubmit(event) {
   try {
     await getImagesByQuery(input_value);
   } catch (error) {
-    console.log('Помилка запиту:', error);
+    iziToast.error({
+      title: 'Помилка',
+      message: 'Щось пішло не так при запиті до API. Спробуйте пізніше.',
+      position: 'topRight',
+    });
+    console.error('Помилка запиту:', error);
   } finally {
     hideLoader();
   }
